@@ -23,12 +23,14 @@ function todoReducer(state, action){
         let todo = action.payload.todo;
         let isFinished = action.payload.isFinished
         const updatedList = state.map((t) => {
-      if (t.id === todo.id) {
-        todo.finished = isFinished;
-      }
-      return t;
-    });
-    return updatedList;
+        if (t.id === todo.id) {
+            todo.finished = isFinished;
+        }
+        return t;
+        });
+        return updatedList;
+    } else{
+        return state;
     }
 }
 
