@@ -1,4 +1,4 @@
-function todoReducer(state, action){
+function todoReducer(state = [], action){
     if(action.type === 'add_todo'){
         let todoText = action.payload.todoText;
         return [
@@ -19,7 +19,7 @@ function todoReducer(state, action){
         let todo = action.payload.todo;
         const updatedList = state.filter((t) => t.id != todo.id);
         return updatedList;
-    }else if(action.type === 'finished_todo'){
+    }else if(action.type === 'finish_todo'){
         let todo = action.payload.todo;
         let isFinished = action.payload.isFinished
         const updatedList = state.map((t) => {
