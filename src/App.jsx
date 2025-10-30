@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
+import "./App.css";
+import AddTodo from "./components/AddTodo/AddTodo";
+import TodoList from "./components/TodoList/TodoList";
 import {
   addTodo,
   deleteTodo,
   editTodo,
   todoFinished,
-} from "./actions/todoActions";
-import "./App.css";
-import AddTodo from "./components/AddTodo/AddTodo";
-import TodoList from "./components/TodoList/TodoList";
+} from "./slices/todoSlice";
 
 function App() {
   const dispatch = useDispatch();
